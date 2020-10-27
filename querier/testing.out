@@ -1,0 +1,229 @@
+querier
+These should fail
+Error: incorrect number of arguments, see README for usage
+1
+Error: incorrect number of arguments, see README for usage
+1
+Error in finding the pageDirectory
+2
+Error: fakeDirectory/ is not a crawler directory
+3
+
+These should pass
+./querier .gitignore/tse-output/wikipedia-depth-1 .gitignore/tse-output/wikipedia-index-1
+Query? 
+Query: and 
+Error: the string cannot begin or end in 'and'
+Query? 
+Query: or some string of stuff 
+Error: the string cannot begin or end in 'or'
+Query? 
+Query: this and or that 
+Error: 'and' and 'or' cannot be consecutive
+Query? 
+Query: this that or 
+Error: the string cannot begin or end in 'or'
+Query? 
+Query: . 
+Error: '.' is an invalid character
+Query? 
+Query: this string - has a bad character 
+Error: '-' is an invalid character
+Query? 
+Query: this one ha-s it built into the word 
+Error: '-' is an invalid character
+Query? 
+Query: dartmouth 
+
+Matches 3 documents (ranked):
+Score:  416 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    1 docID:    1 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/index.html
+Score:    1 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: college 
+
+Matches 4 documents (ranked):
+Score:  242 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    2 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:    1 docID:    1 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/index.html
+Score:    1 docID:    2 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+-------------------------------------------
+Query? 
+Query: dartmouth and college 
+
+Matches 3 documents (ranked):
+Score:  242 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    1 docID:    1 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/index.html
+Score:    1 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: DArTMouth or college 
+
+Matches 4 documents (ranked):
+Score:  658 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    3 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:    2 docID:    1 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/index.html
+Score:    1 docID:    2 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+-------------------------------------------
+Query? 
+Query: Dartmouth and college or Dartmouth 
+
+Matches 3 documents (ranked):
+Score:  658 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    2 docID:    1 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/index.html
+Score:    2 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: this string most likely will not be found 
+
+Matches 0 documents (ranked):
+-------------------------------------------
+Query? 
+
+
+
+fuzztesting!!!!
+
+
+
+./fuzzquery: generating 20 queries from 6506 words
+Query? 
+Query: dereferencing AND charinsert  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+-------------------------------------------
+Query? 
+Query: bruce OR limburgs houston OR encoded smtp  
+
+Matches 1 documents (ranked):
+Score:    2 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: explained ford OR has  
+
+Matches 6 documents (ranked):
+Score:   28 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+Score:   26 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:   19 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+Score:   17 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:   16 docID:    2 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+Score:    8 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+-------------------------------------------
+Query? 
+Query: twice-damaged affordable opposed OR strung OR world-paralyzing OR foundation  
+Error: '-' is an invalid character
+Query? 
+Query: interpreters OR acm stem modules AND templates OR violations  
+
+Matches 4 documents (ranked):
+Score:    3 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+Score:    2 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+Score:    1 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:    1 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+-------------------------------------------
+Query? 
+Query: handles manually johnson pioneers OR puzzle  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+-------------------------------------------
+Query? 
+Query: karl  
+
+Matches 2 documents (ranked):
+Score:    2 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+Score:    1 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+-------------------------------------------
+Query? 
+Query: alphabetically quickly OR city  
+
+Matches 1 documents (ranked):
+Score:    2 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+-------------------------------------------
+Query? 
+Query: appealed  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+-------------------------------------------
+Query? 
+Query: diagnostic OR polski OR encoding AND cmp AND creator  
+
+Matches 6 documents (ranked):
+Score:    2 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+Score:    1 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:    1 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:    1 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+Score:    1 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+Score:    1 docID:    2 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+-------------------------------------------
+Query? 
+Query: utilities lyme selects  
+
+Matches 0 documents (ranked):
+-------------------------------------------
+Query? 
+Query: toolchain AND violations cover OR bears ice  
+
+Matches 1 documents (ranked):
+Score:    3 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+-------------------------------------------
+Query? 
+Query: delegates AND words transgenders AND Osage prevalently OR water  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+-------------------------------------------
+Query? 
+Query: carvestrene OR circularly boxing traffic acronym OR westley  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+-------------------------------------------
+Query? 
+Query: avoided OR stealth properties OR hal OR drive  
+
+Matches 3 documents (ranked):
+Score:    2 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+Score:    2 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+Score:    1 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+-------------------------------------------
+Query? 
+Query: titans  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+-------------------------------------------
+Query? 
+Query: all OR memorandum  
+
+Matches 6 documents (ranked):
+Score:   29 docID:    3 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_table.html
+Score:   26 docID:    4 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_College.html
+Score:   18 docID:    5 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Unix.html
+Score:   16 docID:    2 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+Score:   14 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+Score:    9 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: robotic OR directly AND millennium  
+
+Matches 1 documents (ranked):
+Score:    3 docID:    7 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_science.html
+-------------------------------------------
+Query? 
+Query: steele OR overinstruct OR linearly AND cinchonism OR reality literally  
+
+Matches 1 documents (ranked):
+Score:    1 docID:    6 URL:http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_(programming_language).html
+-------------------------------------------
+Query? 
+Query: relative Yahiya chown scientific spongin  
+
+Matches 0 documents (ranked):
+-------------------------------------------
+Query? 
+
+End of Test Script

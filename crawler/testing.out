@@ -1,0 +1,18 @@
+Error: incorrect number of arguments, see README for usage
+Error: incorrect number of arguments, see README for usage
+Error: incorrect number of arguments, see README for usage
+Error in finding the directory
+Checking URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/A.html
+	Inserting URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/A.html
+Number of files in directory: 
+1
+
+Checking URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/A.html
+	Inserting URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/A.html
+Checking URL: https://en.wikipedia.org/wiki/Algorithm
+Checking URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/B.html
+	Inserting URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/B.html
+Checking URL: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+Number of files in directory: 
+2
+
